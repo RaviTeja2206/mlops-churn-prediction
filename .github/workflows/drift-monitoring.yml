@@ -1,0 +1,25 @@
+name: Drift Monitoring
+
+on:
+  schedule:
+    - cron:  '0 2 * * 1'   # Every Monday at 2am UTC
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+      - name: Install dependencies
+        run: pip install evidently pandas
+      - name: Run drift check
+        run: python monitoring/drift_check.py
+      - name: Upload drift report
+        uses: actions/upload-artifact@v3
+        with:
+          name: drift_report
+          path: monitoring/drift_report.html

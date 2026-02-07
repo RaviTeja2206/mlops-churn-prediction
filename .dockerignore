@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Data (don't include raw data in image)
+data/raw/
+data/sagemaker/
+
+# AWS credentials
+.aws/
+.env
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Tests
+tests/
+notebooks/
+
+# SageMaker
+sagemaker/
+
+# MLflow
+mlruns/
+
+# Logs
+*.log

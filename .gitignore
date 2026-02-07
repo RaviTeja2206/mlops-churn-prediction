@@ -1,0 +1,94 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Models and artifacts
+mlruns/
+mlartifacts/
+
+# Data files
+data/sagemaker/
+*.csv
+!data/raw/*.csv
+!data/processed/*.csv
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Generated reports and plots
+*.png
+*.txt
+!requirements.txt
+!pytest.ini
+
+# Additional exclusions for public repo
+.env
+.env.local
+.env.production
+*.personal
+*.private
+nohup.out
+.DS_Store
+.vscode/settings.json
+.idea/
+Thumbs.db
+
+# Large files and artifacts
+*.joblib
+*.pkl
+*.h5
+*.pb
+*.tar.gz
+mlruns/
+mlartifacts/
+mlflow.log
+
+# Generated reports
+drift_report.html
+drift_report.json
+classification_report_*.txt
+confusion_matrix_*.png
+feature_importance_*.csv
+
+# Backup files
+*.bak
+*.backup
+drift_check_backup.py
+
+# Data files (keep structure but exclude actual data)
+logs/*.csv
+data/sagemaker/
+models/sagemaker_local/
+models/sagemaker_production/
